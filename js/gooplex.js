@@ -191,7 +191,7 @@ module.exports = class gooplex extends Exchange {
             request['limit'] = limit;
         }
         const response = await this[method] (this.extend (request, params));
-        return response;                // map
+        return response;
     }
 
     async fetchOrders (symbol = undefined, since = undefined, limit = undefined, params = {}) {
@@ -210,7 +210,7 @@ module.exports = class gooplex extends Exchange {
             request['limit'] = limit;
         }
         const response = await this[method] (this.extend (request, params));
-        return response;                // map
+        return response;
     }
 
     async createOrder (symbol, type, side, amount, price = undefined, params = {}) {
@@ -256,7 +256,7 @@ module.exports = class gooplex extends Exchange {
             'orderId': id,
         };
         const response = await this[method] (this.extend (request, params));
-        return response;                        // map
+        return response;
     }
 
     async fetchBalance (params = {}) {
